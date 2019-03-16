@@ -1,0 +1,47 @@
+//Colors
+
+//Mixins
+@mixin shadow {
+  text-shadow: 3px 1px 5px rgba(150, 150, 150, 1);
+}
+//Base
+
+mat-toolbar {
+  padding: 45px 100px;
+  background-color: transparent;
+
+  .fill-empty-space {
+    flex: 1 1 auto;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 0 40px;
+      text-decoration: none;
+      color: #fff;
+      @include shadow();
+    }
+
+    .cool-links {
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width 0.3s
+      }
+
+      &:hover {
+        &::after{
+          width: 100%;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+}
+

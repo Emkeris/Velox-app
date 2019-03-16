@@ -1,0 +1,48 @@
+// colors
+
+// mixins
+@mixin shadow {
+  text-shadow: 3px 1px 5px rgba(150, 150, 150, 1);
+}
+// Base
+
+
+.container-fluid {
+  // position: relative;
+  width: 100%;
+  min-height: 700px;
+  background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../../assets/img/header-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  app-navigation {
+    height: 60px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+
+
+    h1 {
+      font-size: 70px;
+      font-weight: 300;
+      color: #fff;
+      @include shadow();
+
+    }
+
+    h4 {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 300;
+      margin-top: 0;
+      @include shadow();
+
+    }
+  }
+}
