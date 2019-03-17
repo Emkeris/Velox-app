@@ -8,9 +8,9 @@
 
 
 .container-fluid {
-  // position: relative;
+  position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 100vh;
   background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../../assets/img/header-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -21,11 +21,13 @@
   }
 
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -426px;
+    top: 50%;
+    margin-top: -150px;
+    text-align: center;
+
 
 
     h1 {

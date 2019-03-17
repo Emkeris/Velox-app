@@ -1,0 +1,95 @@
+// Colors
+$muted_text: #999999;
+
+// Mixins
+@mixin def_mini_img {
+  max-height: 150px;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+// Base
+.container-fluid {
+  width: 100%;
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 7% 30px 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 50px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 5%;
+        margin: 20px auto;
+        height: 4px;
+        background: #00A5FF;
+        transition: width 0.7s;
+      }
+
+      &:hover {
+        &::after{
+          width: 25%;
+          transition: width 0.7s;
+        }
+      }
+    }
+  }
+
+  .containerSec {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+
+    .col {
+      display: inline-block;
+      width: 25%;
+      text-align: center;
+      padding: 25px;
+
+      h3 {
+        font-size: 30px;
+        font-weight: 400;
+        color: #5959a9;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 15%;
+          margin: 15px auto;
+          height: 1px;
+          background: #8B8B8B;
+          border-bottom: solid 1px #F5F5F7;
+          transition: width 0.7s;
+        }
+
+        &:hover {
+          &::after{
+            width: 45%;
+            transition: width 0.7s;
+          }
+        }
+      }
+
+      img {
+        @include def_mini_img();
+      }
+
+      p {
+        color: $muted_text;
+      }
+    }
+  }
+}
+
+
+
+
