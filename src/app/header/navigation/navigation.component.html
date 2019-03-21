@@ -1,8 +1,14 @@
-<mat-toolbar>
-  <span><a href="#"><img src="../../../assets/img/Logo.png" alt="logo"></a></span>
-  <span class="fill-empty-space"></span>
-  <span><a href="#" class="cool-links hidden">Services</a></span>
-  <span><a href="#" class="cool-links hidden">Brands</a></span>
-  <span><a href="#" class="cool-links hidden">Contact us</a></span>
-</mat-toolbar>
-
+<mat-drawer-container value="true">
+  <mat-drawer #drawer mode="over">
+    <ul>
+      <li><button mat-raised-button (click)="drawer.toggle()">xxx</button></li>
+      <li><a href="#" class="cool-links hidden">Services</a></li>
+      <li><a href="#" class="cool-links hidden">Brands</a></li>
+      <li><a href="#" class="cool-links hidden">Contact us</a></li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <a href="#"><img src="../../../assets/img/Logo.png" alt="logo"></a>
+    <button mat-button (click)="drawer.toggle()"><i class="fas fa-ellipsis-v"></i></button>
+  </mat-drawer-content>
+</mat-drawer-container>
